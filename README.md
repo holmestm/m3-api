@@ -1,19 +1,11 @@
-<h1 align="center">
-  <div style="display:inline-block;vertical-align: middle;">
-      <img src="docs/header.png" width="550"/>
-  </div>
-</h1>
-
 ![build](https://github.com/dgarcia360/openapi-boilerplate/workflows/build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# OpenAPI boilerplate
+# M3 OpenAPI 
 
-A starter template for **OpenAPI Specification** (OAS) projects.
+This repo will build the M3 Open API from a set of individually manageable files based on [OpenAPI Boilerplate](https://github.com/dgarcia360/openapi-boilerplate)
 
-This project splits the [Swagger Petstore](https://petstore.swagger.io/) example from the official documentation into smaller files. It also adds handy commands to build, lint, and preview the OpenAPI document from the terminal.
-
-You can use this template to guide the organization of your project. Either if you want to create a new OpenAPI document from scratch or if you already have it defined. 
+Rest of this Readme file is from the original repo...
 
 ## Features
 
@@ -107,5 +99,3 @@ If you want to enhance the boilerplate, please read [CONTRIBUTING.md](CONTRIBUTI
 Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)). Licensed under the [MIT License](LICENSE.md).
 
 The PetStore example used is derived from [OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml), Copyright The Linux Foundation, Licensed under the [Apache License, Version 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/LICENSE).
-
-
