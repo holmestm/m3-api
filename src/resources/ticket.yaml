@@ -1,0 +1,21 @@
+get:
+  summary: Detail
+  operationId: showTicketById
+  description: Info for a specific ticket
+  tags:
+    - tickets
+  parameters:
+    - $ref: "../parameters/path/ticketId.yaml"
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Ticket.yaml"
+    '400':
+      description: The specified ticketId is not a valid value
+    '404':
+      description: The specified ticket is not defined            
+    default:
+      $ref: "../responses/UnexpectedError.yaml"

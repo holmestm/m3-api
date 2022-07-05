@@ -1,0 +1,36 @@
+type: object
+properties:
+  price:
+    type: float
+    description: price of items
+  currencyCode: 
+    type: string
+    description: iso standard currency code
+    maxLength: 3
+    example: GBP
+  effectiveDate:
+    type: string
+    description: date or date-time in format specified by RFC3339
+    format: 
+      oneOf:
+        - date
+        - date-time
+  netPrice:
+    type: float
+    description: price net of salestax
+    example: 100.00
+  salesTax:
+    type: float
+    description: sales tax to show as percentage
+    minimum: 0.01
+    maximum: 1.00
+    example: 0.20
+  priceType:
+    type: string
+    description: optional field to define was or waswas price
+required:
+  - price
+example:
+  price: 123.45
+  currencyCode: GBP
+  effectiveDate: "2022-02-22"

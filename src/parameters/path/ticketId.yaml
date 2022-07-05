@@ -1,0 +1,6 @@
+name: ticketId
+in: path
+required: true
+description: The code of the ticket to retrieve
+schema:
+  type: string

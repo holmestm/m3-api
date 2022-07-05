@@ -12,7 +12,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/ProductData.yaml"
+            $ref: "../schemas/Product.yaml"
     '400':
       description: The specified productId is not a valid value
     '404':

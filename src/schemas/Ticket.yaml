@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    type: string
+    description: the unique key id for the ticket
+    example: '123'
+  productId:
+    type: string
+    description: id of the product that this ticket is associated with
+  pricing:
+    type: array
+    items:
+      description: array of prices 
+      anyOf:
+        - $ref: './Price.yaml'
+    example:
+      - price: 123.34
+        effectiveDate: "2022-02-22"
+      - price: 150.00
+        effectiveDate: "2021-12-18"
+        priceType: "was"

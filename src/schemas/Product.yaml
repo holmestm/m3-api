@@ -1,8 +1,8 @@
 type: object
 properties:
-  code:
+  id:
     type: string
-    description: the unique key code for the product e.g. sku id
+    description: the unique key id for the product e.g. sku id
     example: '123'
   chain:
     type: string

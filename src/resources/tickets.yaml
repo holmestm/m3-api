@@ -1,14 +1,14 @@
 get:
   summary: List
-  operationId: listProducts
-  description: List all products
+  operationId: listTickets
+  description: List all tickets
   tags:
-  - products
+  - tickets
   parameters:
     - $ref: "../parameters/query/limit.yaml"
   responses:
     '200':
-      description: A paged array of products
+      description: A paged array of tickets
       headers:
         x-next:
           description: A link to the next page of responses
@@ -17,21 +17,21 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/Product.yaml"
+            $ref: "../schemas/Ticket.yaml"
     default:
       $ref: "../responses/UnexpectedError.yaml"
 post:
   summary: Create
-  operationId: createproducts
-  description: Create a product
+  operationId: createtickets
+  description: Create a ticket
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '../schemas/Product.yaml'
+          $ref: '../schemas/Ticket.yaml'
   tags:
-  - products
+  - tickets
   responses:
     '201':
         $ref : "../responses/NullResponse.yaml"
