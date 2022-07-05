@@ -5,6 +5,18 @@
 
 This repo will build the M3 Open API from a set of individually manageable files based on [OpenAPI Boilerplate](https://github.com/dgarcia360/openapi-boilerplate)
 
+Will need to have node.js, npm etc. installed - it doesn't really use these, but does the package manager npm to orchestrate the building.
+
+For WSL: https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+
+For Windows in general: https://stackoverflow.com/questions/16000173/install-npm-node-js-package-manager-on-windows-w-o-using-node-js-msi#16003163
+
+Then, to use the npm run commands outlined below you will need:
+```
+npm install -g @stoplight/spectral-cli redoc-cli
+```
+
+
 Rest of this Readme file is from the original repo...
 
 ## Features
