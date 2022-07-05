@@ -1,0 +1,8 @@
+type: object
+properties:
+  text:
+    type: string
+    description: the text of the field
+  altText:
+    type: string
+    description: the alternative text or translation or key for the field

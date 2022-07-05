@@ -1,0 +1,11 @@
+type: object
+properties:
+  value:
+    type: string
+    description: the rating value
+  url:
+    type: string
+    description: the url from which to obtain the rating value if not supplied
+  agent:
+    type: string
+    description: the agent providing the rating value

@@ -1,0 +1,46 @@
+type: object
+properties:
+  featureValue:
+    description: one or more string values
+    oneOf:
+      - type: string
+        example: "Ensure toast is not soggy"
+      - type: array
+        items:
+          type: string
+        example:
+        - Makes Great Toast
+        - Keeps cool under pressure
+  featureRole:
+    description: identifies the purpose of this feature group e.g. long description or list of benefits
+    type: object
+    properties:
+      featureGroupCode:
+        type: string
+        example: "4012"
+      description:
+        type: string
+        example: List of Benefits
+    required:
+      - featureGroupCode
+example:
+  featureValue:
+    - Works with both White and Bread Slices
+    - Doubles as a Coffee Warmer
+  featureRole:
+    featureGroupCode: "4009"
+    description: Med Benefits
+x-examples:
+  long-description-ex:
+    featureValue: Superpowered Toaster
+    featureRole:
+      featureGroupCode: 4001
+      description: Long Description
+  med-sel-features-ex:
+    featureValue:
+      - Makes Great Toast
+      - Keeps cool under pressure
+    featureRole:
+      featureGroupCode: "4009"
+      description: Med SEL Features
+      example-1: null

@@ -1,4 +1,21 @@
-Pet:
-  $ref: "./Pet.yaml"
 Error:
   $ref: "./Error.yaml"
+Barcode:
+  $ref: "./Barcode.yaml"
+Category:
+  $ref: "./Category.yaml"
+Indicator:
+  $ref: "./Indicator.yaml"
+TextField:
+  $ref: "./TextField.yaml"
+Image:
+  $ref: "./Image.yaml"
+Template:
+  $ref: "./Template.yaml"
+Rating:
+  $ref: "./Rating.yaml"
+FeatureGroup:
+  $ref: "./FeatureGroup.yaml"
+ProductData:
+  $ref: "./ProductData.yaml"
+    

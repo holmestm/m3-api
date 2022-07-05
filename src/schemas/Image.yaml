@@ -1,0 +1,8 @@
+type: object
+properties:
+  url:
+    type: string
+    description: the url of the image
+  id:
+    type: string
+    description: the identifier of the image

@@ -1,0 +1,56 @@
+type: object
+properties:
+  code:
+    type: string
+    description: the unique key code for the product e.g. sku id
+    example: '123'
+  chain:
+    type: string
+    description: the unique code for the chain
+    example: CHS-UK
+  model:
+    type: string
+    description: model name
+  brand:
+    type: string
+    description: brand name - note more descriptive text can be provided via the feature group mechanism
+    example: DNN
+  qrcode:
+    description: the image/url/imagefile to be used for the qrcode
+    allOf:
+      - $ref: './Image.yaml'
+  categories:
+    type: array
+    items:
+      $ref: './Category.yaml'
+  barcodes:
+    type: array
+    items:
+      $ref: './Barcode.yaml'
+  rating:
+    description: the rating of the product
+    allOf:
+      - $ref: './Rating.yaml'
+  descriptives:
+    type: array
+    items:
+      $ref: './TextField.yaml'
+  indicators:
+    type: array
+    items:
+      $ref: './Indicator.yaml'
+  features:
+    type: array
+    items:
+      $ref: './FeatureGroup.yaml'
+  children:
+    type: array
+    items:
+      type: string
+required:
+  - code
+  - brand
+  - model
+  - categorisation
+  - codification
+  - features

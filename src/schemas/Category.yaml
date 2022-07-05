@@ -1,0 +1,17 @@
+type: object
+properties:
+  name:
+    type: string
+    description: a short name or code for the category
+    example: 'A0843'
+  description:
+    type: string
+    description: a full name for the category
+    example: Executive Toasters
+example:
+  name: "812"
+  description: Mini Hi-Fi Systems
+x-examples:
+  example-1:
+    name: "8300"
+    description: Mini Hi-Fi Systems

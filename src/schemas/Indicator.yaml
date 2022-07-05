@@ -1,0 +1,16 @@
+type: object
+properties:
+  name:
+    type: string
+    description: the name of the indicator
+  value:
+    type: string
+    description: the value of the indicator
+  grouping:
+    type: string
+    description: the type/grouping of the indicator
+x-examples:
+  example-1:
+    name: string
+    value: string
+    grouping: string

@@ -1,6 +1,6 @@
 # path
 petId:
-  $ref: './path/petId.yaml'
+  $ref: './path/productId.yaml'
 
 # limit
 limit:

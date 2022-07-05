@@ -1,0 +1,18 @@
+type: object
+properties:
+  value:
+    type: string
+    description: barcode value
+  form:
+    type: string
+    enum:
+      - UPC
+      - EAN
+    description: form or type of barcode
+example:
+  value: '4549292021684'
+  form: EAN
+x-examples:
+  ean-example:
+    value: '4549292021684'
+    form: EAN

@@ -1,14 +1,14 @@
 get:
   summary: List
-  operationId: listPets
-  description: List all pets
+  operationId: listProducts
+  description: List all products
   tags:
-  - pets
+  - products
   parameters:
     - $ref: "../parameters/query/limit.yaml"
   responses:
     '200':
-      description: A paged array of pets
+      description: A paged array of products
       headers:
         x-next:
           description: A link to the next page of responses
@@ -17,15 +17,21 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/Pet.yaml"
+            $ref: "../schemas/ProductData.yaml"
     default:
       $ref: "../responses/UnexpectedError.yaml"
 post:
   summary: Create
-  operationId: createPets
-  description: Create a pet
+  operationId: createproducts
+  description: Create a product
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/ProductData.yaml'
   tags:
-  - pets
+  - products
   responses:
     '201':
         $ref : "../responses/NullResponse.yaml"
