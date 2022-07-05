@@ -1,0 +1,18 @@
+type: object
+properties:
+  format: 
+    type: string
+    enum: [short, medium, long]
+    description: form of message e.g. short or long
+  type:
+    type: string
+    description: type of message
+    example: promo
+  content:
+    type: string
+    description: body of message
+  legal:
+    type: string
+    description: small print related to message
+
+  

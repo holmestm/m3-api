@@ -16,6 +16,7 @@ Rating:
   $ref: "./Rating.yaml"
 FeatureGroup:
   $ref: "./FeatureGroup.yaml"
-ProductData:
+Product:
   $ref: "./Product.yaml"
-    
+Ticket:
+  $ref: "./Ticket.yaml"

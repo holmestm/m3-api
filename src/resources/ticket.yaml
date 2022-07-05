@@ -1,6 +1,6 @@
 get:
   summary: Detail
-  operationId: showTicketById
+  operationId: getTicketById
   description: Info for a specific ticket
   tags:
     - tickets
@@ -13,6 +13,11 @@ get:
         application/json:
           schema:
             $ref: "../schemas/Ticket.yaml"
+      links:
+        Product:
+          operationId: getProductById
+          parameters:
+            productId: '$response.body#/productId'            
     '400':
       description: The specified ticketId is not a valid value
     '404':

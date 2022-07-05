@@ -3,7 +3,7 @@ get:
   operationId: listTickets
   description: List all tickets
   tags:
-  - tickets
+    - tickets
   parameters:
     - $ref: "../parameters/query/limit.yaml"
   responses:
@@ -17,12 +17,14 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/Ticket.yaml"
+            type: array
+            items:
+              $ref: "../schemas/Ticket.yaml"
     default:
       $ref: "../responses/UnexpectedError.yaml"
 post:
   summary: Create
-  operationId: createtickets
+  operationId: createTicket
   description: Create a ticket
   requestBody:
     required: true
@@ -31,7 +33,7 @@ post:
         schema:
           $ref: '../schemas/Ticket.yaml'
   tags:
-  - tickets
+    - tickets
   responses:
     '201':
         $ref : "../responses/NullResponse.yaml"

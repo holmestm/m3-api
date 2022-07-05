@@ -1,6 +1,6 @@
 get:
   summary: Detail
-  operationId: showProductById
+  operationId: getProductById
   description: Info for a specific product
   tags:
     - products

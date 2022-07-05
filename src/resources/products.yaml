@@ -17,12 +17,14 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/Product.yaml"
+            type: array
+            items:
+              $ref: "../schemas/Product.yaml"
     default:
       $ref: "../responses/UnexpectedError.yaml"
 post:
   summary: Create
-  operationId: createproducts
+  operationId: createProduct
   description: Create a product
   requestBody:
     required: true

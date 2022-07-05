@@ -1,7 +1,7 @@
 type: object
 properties:
   price:
-    type: float
+    type: number
     description: price of items
   currencyCode: 
     type: string
@@ -10,17 +10,14 @@ properties:
     example: GBP
   effectiveDate:
     type: string
-    description: date or date-time in format specified by RFC3339
-    format: 
-      oneOf:
-        - date
-        - date-time
+    description: date in format specified by RFC3339
+    format: date
   netPrice:
-    type: float
+    type: number
     description: price net of salestax
     example: 100.00
   salesTax:
-    type: float
+    type: number
     description: sales tax to show as percentage
     minimum: 0.01
     maximum: 1.00

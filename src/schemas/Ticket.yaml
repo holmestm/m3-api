@@ -8,14 +8,26 @@ properties:
     type: string
     description: id of the product that this ticket is associated with
   pricing:
+    description: array of prices 
     type: array
     items:
-      description: array of prices 
-      anyOf:
-        - $ref: './Price.yaml'
+      $ref: './Price.yaml'
     example:
       - price: 123.34
         effectiveDate: "2022-02-22"
       - price: 150.00
         effectiveDate: "2021-12-18"
         priceType: "was"
+  template:
+    $ref: './Template.yaml'
+  store:
+    type: string
+  stock:
+    $ref: './StockInfo.yaml'
+  messages:
+    type: array
+    items: 
+      $ref: './Message.yaml'
+
+  
+    

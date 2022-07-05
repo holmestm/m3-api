@@ -1,0 +1,22 @@
+type: object
+properties:
+  stock: 
+    type: string
+    enum: [in, out, not]
+    description: >
+      Store stock info: 
+        * `in` - In Stock
+        * `out` - Out of Stock 
+        * `not` - Not Stocked at this store
+  stockLevel: 
+    type: integer
+    description: number of goods in stock at store
+  stockExpectedDate:
+    type: string
+    format: date
+    description: when stock is expected at store
+  marginIndicator:
+    type: string
+    enum: [low, medium, high]
+      
+      

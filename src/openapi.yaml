@@ -13,11 +13,18 @@ servers:
   - url: http://m3-swagger.vestcom.com/v1
 tags:
   - name: products
+  - name: tickets
 paths:
   /products:
     $ref: "./resources/products.yaml"
   /products/{productId}:
     $ref: "./resources/product.yaml"
+  /tickets:
+    $ref: "./resources/tickets.yaml"
+  /ticket/{ticketId}:
+    $ref: "./resources/ticket.yaml"
+#  /ticket/{ticketId}/product:
+#    $ref: "./resources/product.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"
