@@ -1,5 +1,8 @@
-![build](https://github.com/dgarcia360/openapi-boilerplate/workflows/build/badge.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# API Goals
+
+Initial purpose of this API is to support data upload. We've modelled the API around Product and Ticket entities, with the Product resource representing information about the Product including manufacturer data, general purpose product features and benefits, barcode information etc. that can be reused across a range of different tickets.
+
+We also then support a Ticket endpoint that provides specific content and information focussed on ticket specific data including price information, store level stock data and promotional messaging. The idea is that this API will be used frequently, and the product API less often.
 
 # M3 OpenAPI 
 
