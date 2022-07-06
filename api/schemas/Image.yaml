@@ -6,3 +6,6 @@ properties:
   id:
     type: string
     description: the identifier of the image
+example:
+  id: "12345"
+  url: 'http://static.example.net/i/12345.png'

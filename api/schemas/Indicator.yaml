@@ -9,8 +9,7 @@ properties:
   grouping:
     type: string
     description: the type/grouping of the indicator
-x-examples:
-  example-1:
-    name: string
-    value: string
-    grouping: string
+example:
+  name: badge-flashing
+  value: top-right
+  grouping: merchandising

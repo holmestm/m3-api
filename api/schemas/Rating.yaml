@@ -9,3 +9,6 @@ properties:
   agent:
     type: string
     description: the agent providing the rating value
+example:
+  value: "4"
+  agent: Toast Advisor

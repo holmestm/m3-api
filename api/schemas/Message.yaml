@@ -14,5 +14,11 @@ properties:
   legal:
     type: string
     description: small print related to message
+example:
+  format: long
+  type: promo
+  content: Use your loaf - Get two slices for price of one while stocks last
+  legal: We reserve the right to remove the crusts
+    
 
   

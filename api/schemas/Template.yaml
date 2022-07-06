@@ -6,3 +6,6 @@ properties:
   printroutine:
     type: string
     description: the printroutine of the template
+example:
+  code: F-123/45
+  description: A5 landscape

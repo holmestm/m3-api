@@ -6,3 +6,6 @@ properties:
   altText:
     type: string
     description: the alternative text or translation or key for the field
+example:
+  text: Good Morning!
+  altText: Bonjour

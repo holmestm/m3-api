@@ -18,5 +18,9 @@ properties:
   marginIndicator:
     type: string
     enum: [low, medium, high]
+example:
+  stock: out
+  stockExpectedDate: "2024-02-22"
+  marginIndicator: high
       
       

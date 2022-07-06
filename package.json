@@ -4,13 +4,16 @@
   "description": "Multi-file boilerplate for Open API Specification.",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node-dev --poll src/index.ts",
+    "test-ts": "jest --watchAll --no-cache",
+    "test:ci": "jest",
     "build": "swagger-cli bundle api/openapi.yaml --outfile _build/openapi.yaml --type yaml && npm run favicon",
     "test": "npm run build && spectral lint _build/openapi.yaml",
     "preview": "npm run build && redoc-cli serve _build/openapi.yaml --options.onlyRequiredInSamples",
     "html": "npm run build && redoc-cli bundle _build/openapi.yaml  --output _build/index.html --options.onlyRequiredInSamples",
     "clean": "rm -r _build",
     "deploy": "./ci/deploy.sh",
-    "favicon": "cp ./favicon.ico _build"
+    "favicon": "cp ./favicon.ico _build && cp _build/favicon.ico _build/apple-touch-icon-precomposed.png"
   },
   "repository": {
     "type": "git",
@@ -35,6 +38,7 @@
     "@types/jest": "^28.1.4",
     "@types/morgan": "^1.9.3",
     "@types/node": "^18.0.1",
+    "@types/wait-on": "^5.3.1",
     "axios": "^0.27.2",
     "concurrently": "^7.2.2",
     "jest": "^28.1.2",

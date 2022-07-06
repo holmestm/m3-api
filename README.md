@@ -16,9 +16,41 @@ For Windows in general: https://stackoverflow.com/questions/16000173/install-npm
 
 Then, to use the npm run commands outlined below you will need:
 ```
-npm install -g @stoplight/spectral-cli redoc-cli
+npm install -g @stoplight/spectral-cli redoc-cli swagger-cli typescript ts-node-dev
 ```
 
+build uses npm with the following options:
+
+1. npm run build - bundle the various yaml files in the api subdirectory into a single consolidated openapi.yaml file in the _build directory.
+2. npm run test - as above then run the spectral linter on the resulting yaml to check for common errors and warnings
+3. npm run preview - create a web server serving the Swagger API documentation
+4. npm run start - run a mock API server using the generated yaml:
+
+```
+GET http://localhost:9000/products
+200
+49 ms
+GET /products HTTP/1.1
+User-Agent: PostmanRuntime/7.29.0
+Accept: */*
+Postman-Token: 5c6fc64a-daab-40a8-86fe-392c5fc22e3a
+Host: localhost:9000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+ 
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 598
+ETag: W/"256-jxLuVVeyB6Lk04OEUzaKIIv65QM"
+Date: Tue, 05 Jul 2022 18:36:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+ 
+[{"id":"123","chain":"CHS-UK","model":"string","brand":"DNN","qrcode":{"url":"string","id":"string"},"categories":[{"name":"812","description":"Mini Hi-Fi Systems"}],"barcodes":[{"value":"4549292021684","form":"EAN"}],"rating":{"value":"string","url":"string","agent":"string"},"descriptives":[{"text":"string","altText":"string"}],"indicators":[{"name":"string","value":"string","grouping":"string"}],"features":[{"featureValue":["Works with both White and Bread Slices","Doubles as a Coffee Warmer"],"featureRole":{"featureGroupCode":"4009","description":"Med Benefits"}}],"children":["string"]}]
+```
+
+Checkout https://www.npmjs.com/package/openapi-backend for more info
 
 Rest of this Readme file is from the original repo...
 

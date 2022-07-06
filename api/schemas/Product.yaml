@@ -47,10 +47,12 @@ properties:
     type: array
     items:
       type: string
+    example:
+      - "1234"
+      - "4567"
 required:
   - code
   - brand
   - model
   - categorisation
-  - codification
   - features
